@@ -1,0 +1,119 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  padding: 1rem;
+}
+
+/* Header Styling */
+header {
+  background-color: #007acc;
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+/* Search Box Styling */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-container input {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #007acc;
+  border-radius: 8px;
+  outline: none;
+  width: 220px;
+}
+
+.search-container button {
+  padding: 0.6rem 1rem;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.search-container button:hover {
+  background-color: #005c99;
+}
+
+/* Output Container */
+#output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Weather Card Elements */
+#output h2 {
+  color: #007acc;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#output p {
+  background-color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+#output p:hover {
+  background-color: #e6f4ff;
+  transform: scale(1.03);
+}
+
+/* Spinner Animation */
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #007acc;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  #output {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  #output p {
+    font-size: 1.1rem;
+  }
+}
